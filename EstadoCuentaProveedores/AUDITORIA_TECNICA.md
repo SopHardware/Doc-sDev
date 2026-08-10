@@ -81,13 +81,12 @@ flowchart TB
     end
 
     AG1 -->|SOAP| WS
-    AG2 -->|SOAP proxy (sin usar)| WS
-    AG2 -->|REST API<br/>192.168.10.129 ❌ no está en repo| WS
+    AG2 -->|"SOAP proxy (sin usar)"| WS
+    AG2 -->|"REST API<br/>192.168.10.129 ❌ no está en repo"| WS
     AG1 -->|SqlBulkCopy / ECPA_SpecialUpdates| OP
     SVCW -.-> OP
     ST -->|ADO.NET directo| OP
 ```
-
 **Nota sobre el tráfico:** todas las comunicaciones SOAP/REST son **HTTP sin TLS** (endpoints `http://...` en App.config y appsettings).
 
 ---
